@@ -2,6 +2,7 @@
 
 set -e
 set -o pipefail
+set -x
 
 test "$API_TOKEN" -o "$API_KEY" || { echo >&2 "API_TOKEN or API_KEY must be set"; exit 1; }
 test "$APP_ID" || { echo >&2 "APP_ID must be set"; exit 1; }
