@@ -68,7 +68,7 @@ set_options $@
 # Build the preloader image
 docker build -t resin/resin-preload $DIRNAME
 # Run the preloader
-docker run -it --privileged \
+docker run --privileged \
     -e API_TOKEN=$API_TOKEN \
     -e APP_ID=$APP_ID \
     -e REGISTRY_HOST=$REGISTRY_HOST \
